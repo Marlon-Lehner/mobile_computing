@@ -6,7 +6,7 @@ class NumberGuessModel {
     var guessCount = 0
     
     func compare(to: Int) -> Int {
-        return target - to
+        return to - target
     }
     
     func isValid(string: String?) -> Bool {
@@ -19,6 +19,6 @@ class NumberGuessModel {
         return isValid
     }
     
-    func getImage(
+    
     
 }
