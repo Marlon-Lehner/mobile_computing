@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var EdtGuess: UITextField!
+    @IBOutlet weak var edtGuess: UITextField!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var btnGuess: UIButton!
@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     
     @IBAction func onButtonPressed(_ sender: UIButton) {
         model.guessCount += 1
-        if model.isValid(string: EdtGuess.text) {
-            let compare = model.compare(to: Int(EdtGuess.text!)!)
-            
-            if (compare > 0) {
+        if model.isValid(string: edtGuess.text) {
+            let guessedNumber = Int(edtGuess.text!)!
+            model.addGuess(guess: guessedNumber)
+            let compareResult = model.compare(to: guessedNumber)
+            if (compareResult > 0) {
                 label.text = "Zu hoch!"
-            } else if (compare < 0) {
+            } else if (compareResult < 0) {
                 label.text = "Zu niedrig"
             } else {
                 label.text = "Richtig!"
@@ -43,6 +44,18 @@ class ViewController: UIViewController {
         btnGuess.isEnabled = model.isValid(string: sender.text)
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let guessedNumber = Int(edtGuess.text!)!
+        let compareResult = model.compare(to: guessedNumber)
+        return compareResult == 0;
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, ender: Any?) {
+        if let tvc = tableViewController {
+            tvc.model = model
+        }
+        tableViewController.model = model
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

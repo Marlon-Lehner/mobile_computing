@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C16F6AB2758EE6400BFEBC6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C16F6AA2758EE6400BFEBC6 /* TableViewController.swift */; };
 		7CC5B58F270EFEBF0035B1DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5B58E270EFEBF0035B1DD /* AppDelegate.swift */; };
 		7CC5B591270EFEBF0035B1DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5B590270EFEBF0035B1DD /* SceneDelegate.swift */; };
 		7CC5B593270EFEBF0035B1DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC5B592270EFEBF0035B1DD /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C16F6AA2758EE6400BFEBC6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7CC5B58B270EFEBF0035B1DD /* NumberGuesser_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberGuesser_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC5B58E270EFEBF0035B1DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CC5B590270EFEBF0035B1DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				7CC5B592270EFEBF0035B1DD /* ViewController.swift */,
 				CEB7682D272176DB0041E16F /* NumberGuessModel.swift */,
 				7CC5B594270EFEBF0035B1DD /* Main.storyboard */,
+				7C16F6AA2758EE6400BFEBC6 /* TableViewController.swift */,
 				7CC5B597270EFEC60035B1DD /* Assets.xcassets */,
 				7CC5B599270EFEC60035B1DD /* LaunchScreen.storyboard */,
 				7CC5B59C270EFEC60035B1DD /* Info.plist */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CC5B593270EFEBF0035B1DD /* ViewController.swift in Sources */,
+				7C16F6AB2758EE6400BFEBC6 /* TableViewController.swift in Sources */,
 				7CC5B58F270EFEBF0035B1DD /* AppDelegate.swift in Sources */,
 				CEB7682E272176DB0041E16F /* NumberGuessModel.swift in Sources */,
 				7CC5B591270EFEBF0035B1DD /* SceneDelegate.swift in Sources */,
