@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YdV-7s-Zva">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bJO-Pg-NVp">
+            <objects>
+                <viewController id="nNX-ye-KfI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3S-dc-8gY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="asZ-oN-9XS"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YdV-XM-em8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kf2-oT-G3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="100"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NumberGuesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H33-l7-7g1">
+                                <rect key="frame" x="191" y="431" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="HDs-g8-rQr"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schätzen Sie die Zahl!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtP-eX-GXC">
+                                <rect key="frame" x="122.5" y="374" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fot-M0-HeM">
+                                <rect key="frame" x="174.5" y="509" width="65" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Check"/>
+                                <connections>
+                                    <action selector="onCheckButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="488-Yk-o1U"/>
+                                    <segue destination="nNX-ye-KfI" kind="show" id="G4R-WG-XUt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H33-l7-7g1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1pv-wP-oEn"/>
+                            <constraint firstItem="HtP-eX-GXC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4xC-Hp-wEl"/>
+                            <constraint firstItem="H33-l7-7g1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Br0-IJ-yzG"/>
+                            <constraint firstItem="fot-M0-HeM" firstAttribute="top" secondItem="H33-l7-7g1" secondAttribute="bottom" constant="44" id="Ruq-Aw-bOX"/>
+                            <constraint firstItem="H33-l7-7g1" firstAttribute="top" secondItem="HtP-eX-GXC" secondAttribute="bottom" constant="36" id="o3F-Eh-xFb"/>
+                            <constraint firstItem="fot-M0-HeM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yAC-Vk-blk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game" id="qer-H0-RgQ"/>
+                    <connections>
+                        <outlet property="button" destination="H33-l7-7g1" id="1hq-zm-gOO"/>
+                        <outlet property="inputField" destination="H33-l7-7g1" id="OI0-gF-AdP"/>
+                        <outlet property="textView" destination="HtP-eX-GXC" id="sP8-xM-hmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jmr-sB-txD">
+            <objects>
+                <navigationController id="YdV-7s-Zva" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hai-LP-XkK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="67h-Gd-xvp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKV-hj-fHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
